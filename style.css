@@ -1,0 +1,251 @@
+body{
+    background-color: rgb(236, 236, 236);
+    margin: 0px;
+    font-size: 4vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4vw;
+
+    input{
+        display: none;
+    }
+    label{
+        width: 7vw;
+        height: 7vw;
+        background-color: rgb(127, 150, 255);
+        padding: 2vw;
+        border-radius: 35%;
+        img{
+            width: 7vw;
+        }
+    }
+    a{
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        object-fit: contain;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.searchMargin{
+    padding: 4vw;
+    background-color: rgb(236, 236, 236);;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+.search{
+    border-radius: 4vw;
+    padding: 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+
+    button{
+        border: none;
+        background-color: transparent;
+    }
+    input{
+        border:none;
+        background-color: transparent;
+        width: 80vw;
+        outline: none;
+        font-size: 4vw;
+    }
+    img{
+        width: 5vw
+    }
+}
+
+.disclaimer{
+    display: flex;
+    background-color: white;
+    margin: 4vw;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5vw;
+    font-size: large;
+    img{
+        width: 30%;
+    }
+    p{
+        text-align: justify;
+        width: 65%;
+        margin-right: 5vw;
+    }
+}
+
+.categories{
+    display: flex;
+    margin: 4vw;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 4vw;
+    transition-duration: 0.5s;
+    input{
+        display: none;
+    }
+    label{
+        background-color: rgb(139, 241, 255);
+        padding: 3vw;
+        border-radius: 6vw;
+        animation: grayColor 0.5s forwards;
+    }
+    input:checked + label{
+        animation: cyanColor 0.5s forwards;
+    }
+}
+@keyframes cyanColor {
+    0%{
+        background-color: rgb(139, 241, 255);
+    }
+    100%{
+        background-color: lightgray;
+    }
+}
+@keyframes grayColor {
+    0%{
+        background-color: lightgray;
+    }
+    100%{
+        background-color: rgb(139, 241, 255);
+    }
+    
+}
+
+.products{
+    display: grid;
+    grid-template-columns:44vw 44vw;
+    column-gap: 4vw;
+    padding: 4vw;
+
+.item{
+    grid-area: "item";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(169, 255, 166);
+    border-radius: 6vw;
+    object-fit: cover;
+    height: 44vw;
+    img{
+        width: 100%;
+    }
+    img#magmaleaf{
+        width: 60%;
+    }
+    img#multiberry{
+        height:60vw;
+        width: 60vw;
+    }
+}
+.description{
+    grid-area: "description";
+    font-size: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4vw;
+    input{
+        display: none;
+    }
+    img#favorited{
+        animation: shrink 1s forwards;
+        z-index: 0;
+    }
+    input:checked + label > img#favorited{
+        animation: grow 1s forwards;
+    }
+    input:checked + label > img{
+        animation: grow 1s forwards;
+    }
+    label{
+        position: relative;
+        width: 7vw;
+        height: 7vw;
+        img{
+            position: absolute;
+            width: 7vw;
+            height: 7vw;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+    }
+    p{
+        margin: 1vw;
+    }
+}
+}
+@keyframes shrink {
+    0%{
+        width: 7vw;
+        height: 7vw;
+    }
+    100%{
+        width: 0px;
+        height: 0px;
+        left:50%;
+        top: 50%;
+    }
+}
+@keyframes grow {
+    0%{
+        left:50%;
+        top: 50%;
+        width: 0vw;
+        height: 0vw;
+    }
+    100%{
+        width: 7vw;
+        height: 7vw;
+    }
+}
+
+footer{
+    display: flex;
+    padding-top: 1%;
+    position: sticky;
+    bottom: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    z-index: 2;
+    a{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        width: 19vw;
+        padding-top: 2%;
+        row-gap: 1vh;
+        align-items: center;
+        text-decoration: none;
+        color:black;
+        border-radius: 7vw 7vw 0px 0px;
+        img{
+            height: 5vw;
+        }
+    }
+    a#actual{
+        animation: startScreen 0.5s forwards;
+    }
+}
+@keyframes startScreen {
+    0%{
+        background-color: aqua;
+    }
+    100%{
+        background-color: rgb(196, 240, 255);
+    }
+}

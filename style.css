@@ -20,9 +20,64 @@ header{
         background-color: rgb(127, 150, 255);
         padding: 2vw;
         border-radius: 35%;
+        z-index: 4;
+        transition: all 0.7s ease;
         img{
             width: 7vw;
         }
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: darkgreen;
+        position: absolute;
+        z-index: 3;
+        top: 0px;
+        left: -40vw;
+        height: 70vh;
+        padding-bottom: 84vh;
+        padding-top: 15vh;
+        width: 40vw;
+        transition: left 0.7s ease;
+        a{
+            border-radius: 0;
+            color: white;
+            text-decoration: none;
+            border: 1px solid white;
+            width: 30vw;
+            align-items: center;
+        }
+        div#language{
+            display: flex;
+            width: 30vw;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid white;
+            label{
+                background-color: transparent;
+                text-align: center;
+                color: white;
+                height: 2.5vh;
+                width: auto;
+            }
+            select{
+                background-color: transparent;
+                border: none;
+                width: inherit;
+                border-top: 1px solid white;
+                color: white;
+            }
+        }
+    }
+    input:checked + label{
+        background-color: darkgreen;
+        padding-left: 12vw;
+        padding-right: 12vw;
+    }
+    input:checked ~ section{
+        left:0vw;
     }
     a{
         width: 10vw;

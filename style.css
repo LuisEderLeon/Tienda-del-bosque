@@ -90,6 +90,7 @@ header{
     display: flex;
     margin: 4vw;
     overflow-x: auto;
+    scrollbar-width: none;
     flex-wrap: nowrap;
     gap: 4vw;
     transition-duration: 0.5s;
@@ -150,7 +151,7 @@ header{
         width: 60vw;
     }
 }
-.description{
+figcaption.description{
     grid-area: "description";
     font-size: 5vw;
     display: flex;
@@ -196,24 +197,151 @@ header{
     100%{
         width: 0px;
         height: 0px;
-        left:50%;
-        top: 50%;
+        left: 3.3vw;
+        top: 3.3vw;
     }
 }
 @keyframes grow {
     0%{
-        left:50%;
-        top: 50%;
-        width: 0vw;
-        height: 0vw;
+        left: 3.3vw;
+        top: 3.3vw;
+        width: 1vw;
+        height: 1vw;
     }
     100%{
         width: 7vw;
         height: 7vw;
     }
 }
+.porPagar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5vh;
+    margin-bottom: 3vh;
+}
+.porPagar > .item{
+    background-color: rgb(169, 255, 166);
+    border-radius: 7vw;
+    display: flex;
+    margin: 4vw;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        border-radius: 25%;
+        padding: 1vw;
+        height: 15vh;
+    }
+    img#magmaleaf{
+        height: 10vh;
+        padding: 6vw;
+        padding-left: 10vw;
+    }
+    .pagar{
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        img{
+            height: 2vh;
+            background-color: rgb(76, 76, 176);
+            margin-right: 3vw;
+        }
+        .cantidad{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            button{
+                border: none;
+                background-color: transparent;
+            }
+            img{
+                margin-right: 0;
+                animation: pressed 1s forwards;
+                margin-left: 2vw;
+                margin-right: 2vw;
+            }
+            img:active{
+                animation: none;
+                background-color: rgb(169, 255, 166);
+            }
+            p{
+                margin-right: 0;
+            }
+        }
+    }
+}
+@keyframes pressed {
+    0%{
+        background-color: rgb(53, 83, 52);
+    }
+    100%{
+        background-color: rgb(169, 255, 166);
+    }
+}
 
-footer{
+main#picture{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    align-items: center;
+    background-color: rgb(169, 255, 166);
+    border-radius: 0px 0px 5vw 5vw;
+    img#item{
+        height:50vh;
+    }
+    input{
+        display: none;
+    }
+    img#favorited{
+        animation: shrink 1s forwards;
+        z-index: 0;
+    }
+    input:checked + label > img#favorited{
+        animation: grow 1s forwards;
+    }
+    input:checked + label > img{
+        animation: grow 1s forwards;
+    }
+    label{
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        top: 4vw;
+        right: 4vw;
+        img{
+            position: absolute;
+            width: 7vw;
+            height: 7vw;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+    }
+    a > img#home{
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        top: 4vw;
+        left: 4vw;
+    }
+}
+
+figcaption.pageDescription{    
+    width: 92vw;
+    text-align:justify;
+    margin: 4vw;
+    margin-bottom: 10vh;
+    font-size: 2.3vh;
+    section{
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 4vh;
+    }
+}
+
+footer.links{
     display: flex;
     padding-top: 1%;
     position: sticky;
@@ -239,6 +367,37 @@ footer{
     }
     a#actual{
         animation: startScreen 0.5s forwards;
+    }
+}
+footer.buyNow{
+    display: flex;
+    position: sticky;
+    bottom: 4vw;
+    margin: 4vw;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background-color: rgb(236, 236, 236);
+    a{
+        display: flex;
+        flex-direction: column;
+        height: 20vw;
+        width: 20vw;
+        row-gap: 1vh;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color:black;
+        background-color: white;
+        border-radius: 10vw;
+        img{
+            width: 7vw;
+        }
+    }
+    a#buyNow{
+        background-color: rgb(169, 255, 166);
+        width: 68vw;
+        font-size: 3vh;
     }
 }
 @keyframes startScreen {

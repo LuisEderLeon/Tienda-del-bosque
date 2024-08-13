@@ -183,13 +183,12 @@ header{
 }
 
 .products{
-    display: grid;
-    grid-template-columns:44vw 44vw;
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 4vw;
     padding: 4vw;
 
 .item{
-    grid-area: "item";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,6 +196,7 @@ header{
     border-radius: 6vw;
     object-fit: cover;
     height: 44vw;
+    width: 44vw;
     img{
         width: 100%;
     }
@@ -209,12 +209,12 @@ header{
     }
 }
 figcaption.description{
-    grid-area: "description";
     font-size: 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4vw;
+    width: 44vw;
     input{
         display: none;
     }

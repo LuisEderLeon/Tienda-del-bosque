@@ -1,1 +1,4 @@
-["edibles","plants","transform","dark","shrooms"]
+{
+    "id" : ["edibles", "plants", "transform", "dark", "shrooms"],
+    "name" : ["Comestibles", "Partes de plantas", "Transforma", "Magia negra", "Hongos"]
+}

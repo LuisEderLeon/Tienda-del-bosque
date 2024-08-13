@@ -1,39 +1,45 @@
 [
     {
         "name" : "Megacura",
+        "id" : "megacure",
         "description" : "Famosas por su capacidad para restaurar heridas de vida o muerte, las megacuras operan bajo un principio básico: reducir la entropía. Una célula saludable tiene menos entropía que una célula dañada, por lo que al reducirle su entropía, esta se regenera. A gran escala, esto cura tejidos y órganos de diversos daños, e incluso enfermedades virales como la gripe o el vampirismo.",
         "price" : 10000,
         "categories" : ["edibles","transform"],
-        "image" : "https://pngfre.com/wp-content/uploads/orange-64-294x300.png"
+        "image" : "images/megacure.webp"
     },{
         "name" : "Flor de sangre",
+        "id" : "bloodflower",
         "description" : "La savia de los árboles de sangre tiene la particularidad de imitar a la perfección la sangre humana en cuanto a color, consistencia y sabor. Está compuesta realmente de diversos nutrientes y virus vampíricos, que infectan a cualquier humano que consuma la savia convirtiéndolo en vampiro. Las flores son la parte del árbol que más savia tienen. Y esta savia, gracias a los nutrientes que posee, también sirve de alimento para aquellos que ya han sido infectados.",
         "price" : 12600,
         "categories" : ["plants","edibles","transform"],
-        "image" : "bloodflower.png"
+        "image" : "images/bloodflower.png"
     },{
         "name" : "Multibaya",
+        "id" : "multiberry",
         "description" : "Contienen una sustancia que funcionalmente se asemeja a la cafeína, con la diferencia de que no afecta a los órganos, sino a las células. Acelera el metabolismo del consumidor, lo que les permite correr más rápido, saltar más alto e incluso respirar más fuerte. Esto no es sin costo, toda esa energía debe provenir de algún lugar, lo que genera una pérdida en la grasa del cuerpo. No es recomendado abusar de estas, debido al riesgo de inanición.",
         "price" : 7800,
         "categories" : ["edibles"],
         "image" : "https://static.vecteezy.com/system/resources/previews/024/659/387/original/raspberry-with-leaf-raspberry-icon-clipart-raspberry-cartoon-png.png"
     },{
         "name" : "Magmahoja",
+        "id" : "magmaleaf",
         "description" : "Con una presión de fuerza media, las células de la magmahoja quedan destruidas. Debido a diversas moléculas combustibles en su interior, como ciertos hidrocarburos volátiles, se genera una reacción de combustión al contacto con el nitrógeno del aire. Esto es lo que se puede ver en la escala humana como fuego. Esta también es la razón por la que las magmahojas se mantienen calientes.",
         "price" : 5000,
         "categories" : ["plants"],
-        "image" : "https://www.clker.com/cliparts/v/V/J/I/t/m/red-leaf-md.png"
+        "image" : "images/magmaleaf.webp"
     },{
         "name" : "Flor cantora",
+        "id" : "songflower",
         "description" : "Los pétalos de las flores cantoras son considerablemente flexibles debido a la gran cantidad de aire dentro de sus células. Esta flexibilidad les permite absorber ondas de aire, también conocidas como sonido, y las devuelven con versiones armonizadas, generando así una música relajante que al mismo tiempo limita la percepción de otros sonidos. Son muy útiles para calmar el miedo y el estrés.",
         "price" : 3400,
         "categories" : ["plants"],
         "image" : "https://png.pngtree.com/png-clipart/20230913/original/pngtree-bluebell-clipart-blue-bluebell-flower-flower-icon-isolated-on-white-background-png-image_11057950.png"
     },{
         "name" : "Antihongo",
+        "id" : "antishroom",
         "description" : "Al molerse y mesclarse con agua, generan un liquido capaz de invertir las propiedades de un objeto. Las magmahojas congelan, las megacuras maximizan entropia, las flores cantoras amplifican los sonidos en lugar de minimizarlos. Estos hongos no tienen una explicación real de como logran invertir las propiedades de los objetos, por lo que forman parte de la magia oscura, aquella que no se puede explicar.",
         "price" : 20700,
         "categories" : ["dark","shrooms"],
-        "image" : "antishroom.png"
+        "image" : "images/antishroom.png"
     }
 ]

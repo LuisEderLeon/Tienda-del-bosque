@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(220, 220, 220);
     margin: 0px;
     font-size: 4vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -68,6 +68,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 4vw;
+    background-color: white;
     label{
         width: 7vw;
         height: 7vw;
@@ -96,10 +97,10 @@ header{
 
 .searchMargin{
     padding: 4vw;
-    background-color: rgb(236, 236, 236);;
+    background-color: rgb(220, 220, 220);
     position: sticky;
     top: 0px;
-    z-index: 2;
+    z-index: 3;
 }
 .search{
     border-radius: 4vw;
@@ -149,7 +150,7 @@ header{
     overflow-x: auto;
     scrollbar-width: none;
     flex-wrap: nowrap;
-    gap: 4vw;
+    gap: 2vw;
     transition-duration: 0.5s;
     input{
         display: none;
@@ -159,6 +160,7 @@ header{
         padding: 3vw;
         border-radius: 6vw;
         animation: grayColor 0.5s forwards;
+        white-space: nowrap;
     }
     input:checked + label{
         animation: cyanColor 0.5s forwards;
@@ -182,92 +184,87 @@ header{
     
 }
 
-.products{
+main.products{
     display: flex;
     flex-wrap: wrap;
-    column-gap: 4vw;
-    padding: 4vw;
-
-.item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(169, 255, 166);
-    border-radius: 6vw;
-    object-fit: cover;
-    height: 44vw;
-    width: 44vw;
-    img{
-        width: 100%;
-    }
-    img#magmaleaf{
-        width: 60%;
-    }
-    img#multiberry{
-        height:60vw;
-        width: 60vw;
-    }
-}
-figcaption.description{
-    font-size: 5vw;
-    display: flex;
+    row-gap: 4vw;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 4vw;
-    width: 44vw;
-    input{
-        display: none;
-    }
-    img#favorited{
-        animation: shrink 1s forwards;
-        z-index: 0;
-    }
-    input:checked + label > img#favorited{
-        animation: grow 1s forwards;
-    }
-    input:checked + label > img{
-        animation: grow 1s forwards;
-    }
-    label{
-        position: relative;
-        width: 7vw;
-        height: 7vw;
-        img{
-            position: absolute;
-            width: 7vw;
-            height: 7vw;
-            top: 0px;
-            left: 0px;
-            z-index: 1;
+    padding: 4vw;
+    figure{
+        width: 48%;
+        margin: 0px;
+        background-color: rgb(169, 255, 166);
+        border-radius: 6vw;
+        overflow: hidden;
+        object-fit: contain;
+        a{
+            background-color: darkblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+            width: 100%;
+            height: 44vw;
+            img{
+                width: 100%;
+            }
+            img#multiberry{
+                width: 120%;
+            }
+        }
+        figcaption.description{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 5%;
+            label{
+                position: relative;
+                width: 6vw;
+                height: 6vw;
+                img{
+                    position: absolute;
+                    top: 0px;
+                    width: 100%;
+                    z-index: 2;
+                }
+                img.favorited{
+                    animation: shrink 1s forwards;
+                    z-index: 1;
+                }
+            }
+            input:checked + label > img{
+                animation: grow 1s forwards;
+            }
         }
     }
-    p{
-        margin: 1vw;
-    }
-}
 }
 @keyframes shrink {
     0%{
-        width: 7vw;
-        height: 7vw;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
     }
     100%{
         width: 0px;
         height: 0px;
-        left: 3.3vw;
-        top: 3.3vw;
+        top: 50%;
+        left: 50%;
     }
 }
 @keyframes grow {
     0%{
-        left: 3.3vw;
-        top: 3.3vw;
-        width: 1vw;
-        height: 1vw;
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
     }
     100%{
-        width: 7vw;
-        height: 7vw;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
     }
 }
 .porPagar{
@@ -287,11 +284,6 @@ figcaption.description{
         border-radius: 25%;
         padding: 1vw;
         height: 15vh;
-    }
-    img#magmaleaf{
-        height: 10vh;
-        padding: 6vw;
-        padding-left: 10vw;
     }
     .pagar{
         height: 30%;
@@ -340,12 +332,12 @@ figcaption.description{
 main#picture{
     display: flex;
     justify-content: center;
-    height: 50vh;
+    width: 100vw;
     align-items: center;
     background-color: rgb(169, 255, 166);
     border-radius: 0px 0px 5vw 5vw;
     img#item{
-        height:50vh;
+        width: 100%;
     }
     input{
         display: none;
@@ -430,7 +422,7 @@ footer.buyNow{
     display: flex;
     position: sticky;
     bottom: 4vw;
-    margin: 4vw;
+    padding: 4vw;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
@@ -541,15 +533,5 @@ p.unavailable{
 }
 
 @media (min-width: 500px) {
-    p.unavailable{
-        display: block;
-        background-color: white;
-        font-size: 5vw;
-        width: 100vw;
-        height: 100vh;
-        margin: 0px;
-        position: sticky;
-        top: 0px;
-        z-index: 6;
-    }
+    
 }

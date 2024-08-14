@@ -1,0 +1,100 @@
+
+main#picture{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    background-color: rgb(169, 255, 166);
+    border-radius: 0px 0px 10vw 10vw;
+    img#item{
+        width: 100%;
+        border-radius:inherit;
+    }
+    input{
+        display: none;
+    }
+    img#favorited{
+        animation: shrink 1s forwards;
+        z-index: 0;
+    }
+    input:checked + label > img#favorited{
+        animation: grow 1s forwards;
+    }
+    input:checked + label > img{
+        animation: grow 1s forwards;
+    }
+    label{
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        top: 4vw;
+        right: 4vw;
+        img{
+            position: absolute;
+            width: 7vw;
+            height: 7vw;
+            top: 0px;
+            left: 0px;
+            z-index: 1;
+        }
+    }
+    a > img#home{
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        top: 4vw;
+        left: 4vw;
+    }
+}
+
+figcaption.pageDescription{    
+    width: 92vw;
+    text-align:justify;
+    margin: 4vw;
+    min-height: 37vh;
+    font-size: 2.3vh;
+    section{
+        display: flex;
+        font-weight: bold;
+        justify-content: space-between;
+        font-size: 4vh;
+        align-items: center;
+        div{
+            min-width: 37%;
+            text-align: left;
+        }
+    }
+}
+
+
+footer.buyNow{
+    display: flex;
+    position: sticky;
+    bottom: 0px;
+    padding: 4vw;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background-color: rgb(236, 236, 236);
+    a{
+        display: flex;
+        flex-direction: column;
+        height: 20vw;
+        width: 20vw;
+        row-gap: 1vh;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color:black;
+        background-color: white;
+        border-radius: 10vw;
+        img{
+            width: 7vw;
+        }
+    }
+    #buyNow{
+        background-color: rgb(169, 255, 166);
+        width: 68vw;
+        font-size: 3vh;
+    }
+}

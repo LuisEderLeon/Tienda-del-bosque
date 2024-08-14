@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda del bosque</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="shop.css">
     <link rel="icon" type="image" href="https://pngfre.com/wp-content/uploads/orange-64-294x300.png">
 </head>
 <body>
+    <p class="unavailable">
+        Formato de vista no disponible, por favor use una pantalla mas pequeña
+    </p>
     <input type="checkbox" id="menu-checkbox">
     <header>
         <label for="menu-checkbox"><img src="https://www.svgrepo.com/show/509382/menu.svg" alt="menu"></label>
@@ -16,8 +19,8 @@
         <a href="perfil.html"><img src="https://t3.ftcdn.net/jpg/05/65/59/94/360_F_565599496_tvCQLshiDNOyGICqMrDMVufMtPD2vLr5.jpg" alt="profile"></a>
     </header>
     <aside class="asideMenu">
-        <a href="index.html">Favoritos</a>
-        <a href="shop.html">Historial</a>
+        <a href="inicio.html">Favoritos</a>
+        <a href="compras.html">Historial</a>
         <a href="https://www.wattpad.com/1447978438-the-magic-forest-a-tale-of-survival-part-1-pilot">Ayuda</a>
         <div id="language">
             <label for="language">Idioma</label>
@@ -31,29 +34,14 @@
         <a href="perfil.html">Cerrar Sesión</a>
     </aside>
 
-    <div class="searchMargin">
-        <form action="index.html" method="get" class="search">
-            <button type="submit"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Magnifying_glass_icon.svg/1200px-Magnifying_glass_icon.svg.png" alt="search"></button>
-            <input type="search" id="search" placeholder="Buscar...">
-        </form>
-    </div>
+    <section class="porPagar">
+    </section>
 
-    <article class="disclaimer">
-        <img src="https://static.thenounproject.com/png/77879-200.png" alt="shhh">
-        <p><b>Shhh!</b> <br> Esta tienda es conocida por personas muy exclusivas. <br> Nuestra instalacion fisica se encuentra afuera del pueblo de los duendes, debajo del frondoso arbol de mango. <br> Mantengamoslo secreto.</p>
-    </article>
-
-    <nav class="categories">
-    </nav>
-
-    <main class="products">
-    </main>
-    
     <footer class="links">
-        <a href="index.html" id="actual"><img src="https://static-00.iconduck.com/assets.00/home-icon-237x256-0r6h246z.png" alt="home">Inicio</a>
-        <a href="shop.html"><img src="https://static-00.iconduck.com/assets.00/shopping-cart-icon-512x462-yrde1eu0.png" alt="cart">Compras</a>
+        <a href="index.html"><img src="https://static-00.iconduck.com/assets.00/home-icon-237x256-0r6h246z.png" alt="home">Inicio</a>
+        <a href="shop.html" id="actual"><img src="https://static-00.iconduck.com/assets.00/shopping-cart-icon-512x462-yrde1eu0.png" alt="cart">Compras</a>
         <a href="perfil.html"><img src="https://static.thenounproject.com/png/638636-200.png" alt="me">Perfil</a>
     </footer>
-    <script src="mainBrain.js"></script>
+    <script  src="shopBrain.js"></script>
 </body>
 </html>

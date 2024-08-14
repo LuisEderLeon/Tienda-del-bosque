@@ -1,0 +1,72 @@
+
+.porPagar{
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+    row-gap: 5vw;
+    min-height: 80vh;
+}
+.porPagar > .item{
+    background-color: rgb(169, 255, 166);
+    border-radius: 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        border-radius: inherit;
+        height: 15vh;
+    }
+    .pagar{
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        img{
+            height: 2vh;
+            background-color: rgb(76, 76, 176);
+            margin-right: 3vw;
+            border-radius: 25%;
+            padding: 1vw;
+        }
+        .cantidad{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            button{
+                border: none;
+                background-color: transparent;
+            }
+            img{
+                margin-right: 0;
+                animation: release 1s forwards;
+                margin-left: 2vw;
+                margin-right: 2vw;
+            }
+            img:active{
+                animation: pressed 0s forwards;
+                background-color: rgb(169, 255, 166);
+            }
+            p{
+                margin-right: 0;
+            }
+        }
+    }
+}
+@keyframes release {
+    0%{
+        background-color: rgb(53, 83, 52);
+    }
+    100%{
+        background-color: rgb(169, 255, 166);
+    }
+}
+
+@keyframes pressed {
+    0%{
+        background-color: rgb(169, 255, 166);
+    }
+    100%{
+        background-color: rgb(53, 83, 52);
+    }
+}

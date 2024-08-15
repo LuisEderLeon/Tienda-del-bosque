@@ -143,3 +143,57 @@ main.products{
         }
     }
 }
+
+@media (min-width: 500px) {
+    .searchMargin{
+        margin-left: 10vw;
+        padding: 1vh;
+        .search{
+            border-radius: 0px;
+            button{
+                img{
+                    width: 3vh;
+                }
+            }
+            input{
+                font-size: 2vh;
+            }
+        }
+        form{
+            padding: 2vh;
+        }
+
+    }
+    .disclaimer{
+        margin-left: 14vw;
+    }
+    .categories{
+        margin-left: 14vw;
+    }
+    main.products{
+        margin-left: 10vw;
+        figure{
+            width: 24%;
+            height: 25vw;
+            border-radius: 0px;
+            a{
+                height: 78%
+            }
+            figcaption.description{
+                height: 12%;
+                p{
+                    margin: 0px;
+                    font-size: 1.5vh;
+                }
+                label{
+                    position: relative;
+                    width: 3vw;
+                    height: 3vw;
+                }
+                input:checked + label > img{
+                    animation: grow 1s forwards;
+                }
+            }
+        }
+    }
+}

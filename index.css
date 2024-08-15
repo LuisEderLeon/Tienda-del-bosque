@@ -63,11 +63,11 @@
         background-color: rgb(139, 241, 255);
         padding: 3vw;
         border-radius: 6vw;
-        animation: grayColor 0.5s forwards;
+        animation: cyanColor 0.5s forwards;
         white-space: nowrap;
     }
     input:checked + label{
-        animation: cyanColor 0.5s forwards;
+        animation: grayColor 0.5s forwards;
     }
 }
 @keyframes cyanColor {

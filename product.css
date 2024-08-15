@@ -31,8 +31,8 @@ main#picture{
         right: 4vw;
         img{
             position: absolute;
-            width: 7vw;
-            height: 7vw;
+            width: 100%;
+            height: 100%;
             top: 0px;
             left: 0px;
             z-index: 1;
@@ -79,8 +79,9 @@ footer.buyNow{
     a{
         display: flex;
         flex-direction: column;
-        height: 20vw;
-        width: 20vw;
+        height: 10vw;
+        width: 10vw;
+        padding: 4vw;
         row-gap: 1vh;
         justify-content: center;
         align-items: center;
@@ -89,12 +90,45 @@ footer.buyNow{
         background-color: white;
         border-radius: 10vw;
         img{
-            width: 7vw;
+            width: 100%;
         }
     }
     #buyNow{
         background-color: rgb(169, 255, 166);
         width: 68vw;
         font-size: 3vh;
+    }
+}
+
+@media (min-width: 500px) {
+    main#picture{
+        width: 50vw;
+        height: 78vh;
+        overflow: hidden;
+        img#item{
+            width: 105%;
+        }
+        label{
+            width: 3vw;
+            height: 3vw;
+        }
+        a img#home{
+            width: 3vw;
+            height: 3vw;
+        }
+    }
+    figcaption.pageDescription{
+        width: 40vw;
+        position: absolute;
+        right: 0;
+        top: 5vw;
+    }
+    footer.buyNow{
+        padding: 2vw;
+        a{
+            padding: 2vw;
+            height: 5vw;
+            width: 5vw;
+        }
     }
 }

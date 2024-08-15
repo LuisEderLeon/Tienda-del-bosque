@@ -1,54 +1,53 @@
-
 .porPagar{
     display: flex;
     flex-direction: column;
     padding: 4vw;
     row-gap: 5vw;
     min-height: 80vh;
-}
-.porPagar > .item{
-    background-color: rgb(169, 255, 166);
-    border-radius: 7vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    img{
-        border-radius: inherit;
-        height: 15vh;
-    }
-    .pagar{
-        height: 30%;
+    .item{
+        background-color: rgb(169, 255, 166);
+        border-radius: 7vw;
         display: flex;
-        flex-direction: column;
-        align-items: end;
-        img{
-            height: 2vh;
-            background-color: rgb(76, 76, 176);
-            margin-right: 3vw;
-            border-radius: 25%;
-            padding: 1vw;
+        justify-content: space-between;
+        align-items: center;
+        img.image{
+            border-radius: inherit;
+            height: 15vh;
         }
-        .cantidad{
+        .pagar{
+            height: 30%;
             display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: space-evenly;
-            button{
-                border: none;
-                background-color: transparent;
-            }
+            flex-direction: column;
+            align-items: end;
             img{
-                margin-right: 0;
-                animation: release 1s forwards;
-                margin-left: 2vw;
-                margin-right: 2vw;
+                height: 2vh;
+                background-color: rgb(76, 76, 176);
+                margin-right: 3vw;
+                border-radius: 25%;
+                padding: 1vw;
             }
-            img:active{
-                animation: pressed 0s forwards;
-                background-color: rgb(169, 255, 166);
-            }
-            p{
-                margin-right: 0;
+            .cantidad{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-evenly;
+                button{
+                    border: none;
+                    background-color: transparent;
+                }
+                img{
+                    margin-right: 0;
+                    animation: release 1s forwards;
+                    margin-left: 2vw;
+                    margin-right: 2vw;
+                }
+                img:active{
+                    animation: pressed 0s forwards;
+                    background-color: rgb(169, 255, 166);
+                }
+                p{
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -68,5 +67,28 @@
     }
     100%{
         background-color: rgb(53, 83, 52);
+    }
+}
+
+@media (min-width: 500px) {
+    .porPagar{
+        min-height: 68vh;
+        padding: 4vh;
+        flex-direction: row;
+        column-gap: 4vh;
+        flex-wrap: wrap;
+        .item{
+            flex-direction: column;
+            border-radius: 0px;
+            width: 20vw;
+            height: 30vw;
+            img.image{
+                height: 50%;
+            }
+            .pagar img{
+                padding: 1vh;
+                height: 1.5vw;
+            }
+        }
     }
 }

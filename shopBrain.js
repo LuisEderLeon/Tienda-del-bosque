@@ -26,7 +26,7 @@ function initProducts(){
                 let div = document.createElement('div');
                 div.classList.add('item');
                 div.id = product.id;
-                div.innerHTML = `<img src="${product.image}" alt="${product.id}">
+                div.innerHTML = `<img src="${product.image}" alt="${product.id}" class="image">
                 <p><b>${product.name}</b> <br> $ ${product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</p>
                 <section class="pagar">
                     <a href="product.html?type=${product.id}"><img src="https://www.svgrepo.com/show/349679/arrow-up-right.svg" alt="description"></a>

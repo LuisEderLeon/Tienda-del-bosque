@@ -75,12 +75,13 @@
         min-height: 68vh;
         padding: 4vh;
         flex-direction: row;
-        column-gap: 4vh;
+        column-gap: 2.6%;
         flex-wrap: wrap;
         .item{
+            font-size: 2vw;
             flex-direction: column;
             border-radius: 0px;
-            width: 20vw;
+            width: 23%;
             height: 30vw;
             img.image{
                 height: 50%;

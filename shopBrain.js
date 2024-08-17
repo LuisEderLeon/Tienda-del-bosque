@@ -27,7 +27,7 @@ function initProducts(){
                 div.classList.add('item');
                 div.id = product.id;
                 div.innerHTML = `<img src="${product.image}" alt="${product.id}" class="image">
-                <p><b>${product.name}</b> <br> $ ${product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</p>
+                <p id="${product.id}" class="price"><b>${product.name}</b> <br> $ ${(product.price * cart.ammounts[i]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</p>
                 <section class="pagar">
                     <a href="product.html?type=${product.id}"><img src="https://www.svgrepo.com/show/349679/arrow-up-right.svg" alt="description"></a>
                     <section class="cantidad">
@@ -43,6 +43,7 @@ function initProducts(){
     plusButtons = document.getElementsByClassName('more');
     minusButtons = document.getElementsByClassName('less');
     ammounts = document.getElementsByClassName('ammount');
+    totals = document.querySelectorAll('div.item p.price');
     
     Array.from(plusButtons).forEach(button => {
         button.addEventListener('click', () => {
@@ -50,6 +51,11 @@ function initProducts(){
             cart.ammounts[i]++;
             ammounts[i].textContent = cart.ammounts[i].toString();
             localStorage.setItem("cartAmmounts", JSON.stringify(cart.ammounts));
+            products.forEach(product => {
+                if (product.id == cart.names[i]){
+                    totals[i].innerHTML = `<b>${product.name}</b> <br> $ ${(product.price * cart.ammounts[i]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`
+                }
+            })
         });
     });
     Array.from(minusButtons).forEach(button => {
@@ -58,6 +64,11 @@ function initProducts(){
             cart.ammounts[i]--;
             ammounts[i].textContent = cart.ammounts[i].toString();
             localStorage.setItem("cartAmmounts", JSON.stringify(cart.ammounts));
+            products.forEach(product => {
+                if (product.id == cart.names[i]){
+                    totals[i].innerHTML = `<b>${product.name}</b> <br> $ ${(product.price * cart.ammounts[i]).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`
+                }
+            })
 
             if (cart.ammounts[i] === 0) {
                 main.removeChild(document.querySelector('div#' + cart.names[i]));

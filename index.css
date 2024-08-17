@@ -166,6 +166,7 @@ main.products{
     .disclaimer{
         border-radius: 0px;
         margin: 2vw 10vw;
+        font-size: 2vw;
         img{
             width: 15%;
         }
@@ -173,7 +174,7 @@ main.products{
     .categories{
         label{
             padding: 1vw;
-            font-size: 3vw;
+            font-size: 2.7vw;
         }
     }
     main.products{

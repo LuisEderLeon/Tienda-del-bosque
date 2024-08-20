@@ -27,4 +27,4 @@ En la sección del carrito se puede ver una lista con diferentes objetos que el 
 
 ## Perfil
 
-La página del perfil no contiene funcionalidad real al igual que las otras, pero si tiene diferentes placeholders para diversas funciones pensadas a futuro.
+La página del perfil no contiene funcionalidad real, pero si tiene diferentes placeholders para diversas funciones pensadas a futuro.

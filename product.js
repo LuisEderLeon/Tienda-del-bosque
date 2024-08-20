@@ -1,6 +1,10 @@
 const type = new URLSearchParams(window.location.search).get("type");
 
 var product;
+var favorites = JSON.parse(localStorage.getItem("favorites"));
+var picture = document.querySelector('main>img');
+var input = document.querySelector('main>input');
+
 fetch('products.json').then(response => response.json()).then(data => {
     data.forEach(element => {
         if (element.id === type){
@@ -11,11 +15,13 @@ fetch('products.json').then(response => response.json()).then(data => {
 });
 
 function init(){
-    let picture = document.querySelector('main>img');
     picture.src = product.image;
     picture.alt = product.id;
 
-    document.querySelector('main>input').id = product.id + "favorite";
+    input.id = product.id + "favorite";
+    input.checked = favorites.includes(input.id)
+    input.addEventListener("change",updateFavorites)
+
     document.querySelector('main>label').htmlFor = product.id + "favorite";
 
     document.querySelector('figcaption>section>div#name').textContent = product.name;
@@ -48,4 +54,13 @@ function init(){
             localStorage.setItem("cartAmmounts", JSON.stringify(cart.ammounts));
         }
     });
+}
+
+function updateFavorites(){
+    if (input.checked){
+        favorites.push(input.id)
+    } else {
+        favorites.splice(favorites.indexOf(input.id),1)
+    }
+    localStorage.setItem("favorites",JSON.stringify(favorites))
 }

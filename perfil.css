@@ -70,9 +70,11 @@ section.profile{
 }
 
 @media (min-width: 500px) {
+    body{
+        font-size: 2vh;
+    }
     main#profile{
         padding-bottom: 5vh;
-        font-size: 2vh;
         a > img#home{
             width: 5vh;
             height: 5vh;
@@ -80,7 +82,7 @@ section.profile{
     }
     nav.profile{
         height: 10vh;
-        top: 35vh;
+        top: 33vh;
         a img{
             height: 5vh;
         }
@@ -88,7 +90,8 @@ section.profile{
     section.profile{
         display: flex;
         justify-content: space-evenly;
-        min-height: 39vh;
+        min-height: 44vh;
+        padding-top: 8vh;
          a{
             flex-direction: column;
             img{

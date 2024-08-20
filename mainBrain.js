@@ -63,8 +63,9 @@ function initProducts(){
             let input = document.createElement("input")
             input.type = "checkbox";
             input.id = product.id + "favorite";
-            input.class = "favorite"
+            input.classList.add("favorite")
             figureDetails.appendChild(input);
+            input.addEventListener("change",updateFavorites);
 
             let label = document.createElement("label");
             label.htmlFor = product.id + "favorite";
@@ -77,14 +78,28 @@ function initProducts(){
             label.appendChild(fullStar);
             figureDetails.appendChild(label);
             figure.appendChild(figureDetails)
-
             main.appendChild(figure)
         }
     });
+    let favoriteCheckboxes = document.querySelectorAll("input.favorite");
+    favoriteCheckboxes.forEach(checkbox => {
+        checkbox.checked = favorites.includes(checkbox.id);
+    });
+}
+
+function updateFavorites() {
+    let favoriteCheckboxes = document.querySelectorAll("input.favorite");
+    favorites = [];
+    favoriteCheckboxes.forEach(checkbox => {
+        if(checkbox.checked){
+            favorites.push(checkbox.id);
+        }
+    });
+    localStorage.setItem("favorites", JSON.stringify(favorites));
 }
 
 if (localStorage.getItem("favorites") != null){
-    var favorites = localStorage.getItem("favorites");
+    var favorites = JSON.parse(localStorage.getItem("favorites"));
 } else {
     var favorites = []
 }

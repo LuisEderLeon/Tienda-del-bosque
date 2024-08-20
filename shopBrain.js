@@ -76,6 +76,11 @@ function initProducts(){
                 cart.ammounts.splice(i, 1);
                 localStorage.setItem("cartNames", JSON.stringify(cart.names));
                 localStorage.setItem("cartAmmounts", JSON.stringify(cart.ammounts));
+
+                plusButtons = document.getElementsByClassName('more');
+                minusButtons = document.getElementsByClassName('less');
+                ammounts = document.getElementsByClassName('ammount');
+                totals = document.querySelectorAll('div.item p.price');
             }
         });
     });

@@ -76,15 +76,17 @@
         padding: 4vh;
         flex-direction: row;
         column-gap: 2.6%;
+        row-gap: 2.6vw;
         flex-wrap: wrap;
         .item{
             font-size: 2vw;
             flex-direction: column;
             border-radius: 0px;
             width: 23%;
-            height: 30vw;
+            height: calc(10vh + 25vw);
             img.image{
-                height: 50%;
+                width: 50%;
+                height: auto;
             }
             .pagar img{
                 padding: 1vh;

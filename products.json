@@ -19,7 +19,7 @@
         "description" : "Contienen una sustancia que funcionalmente se asemeja a la cafeína, con la diferencia de que no afecta a los órganos, sino a las células. Acelera el metabolismo del consumidor, lo que les permite correr más rápido, saltar más alto e incluso respirar más fuerte. Esto no es sin costo, toda esa energía debe provenir de algún lugar, lo que genera una pérdida en la grasa del cuerpo. No es recomendado abusar de estas, debido al riesgo de inanición.",
         "price" : 7800,
         "categories" : ["edibles"],
-        "image" : "https://static.vecteezy.com/system/resources/previews/024/659/387/original/raspberry-with-leaf-raspberry-icon-clipart-raspberry-cartoon-png.png"
+        "image" : "images/multiberry.jpg"
     },{
         "name" : "Magmahoja",
         "id" : "magmaleaf",

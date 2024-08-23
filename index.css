@@ -102,7 +102,6 @@ main.products{
         overflow: hidden;
         object-fit: contain;
         a{
-            background-color: darkblue;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -111,9 +110,6 @@ main.products{
             height: 42vw;
             img{
                 width: 100%;
-            }
-            img#multiberry{
-                width: 120%;
             }
         }
         figcaption.description{

@@ -70,10 +70,8 @@ section.profile{
 }
 
 @media (min-width: 500px) {
-    body{
-        font-size: 2vh;
-    }
     main#profile{
+        font-size: 2vh;
         padding-bottom: 5vh;
         a > img#home{
             width: 5vh;

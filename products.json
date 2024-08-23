@@ -12,7 +12,7 @@
         "description" : "La savia de los árboles de sangre tiene la particularidad de imitar a la perfección la sangre humana en cuanto a color, consistencia y sabor. Está compuesta realmente de diversos nutrientes y virus vampíricos, que infectan a cualquier humano que consuma la savia convirtiéndolo en vampiro. Las flores son la parte del árbol que más savia tienen. Y esta savia, gracias a los nutrientes que posee, también sirve de alimento para aquellos que ya han sido infectados.",
         "price" : 12600,
         "categories" : ["plants","edibles","transform"],
-        "image" : "images/bloodflower.png"
+        "image" : "images/bloodflower.jpg"
     },{
         "name" : "Multibaya",
         "id" : "multiberry",
@@ -33,7 +33,7 @@
         "description" : "Los pétalos de las flores cantoras son considerablemente flexibles debido a la gran cantidad de aire dentro de sus células. Esta flexibilidad les permite absorber ondas de aire, también conocidas como sonido, y las devuelven con versiones armonizadas, generando así una música relajante que al mismo tiempo limita la percepción de otros sonidos. Son muy útiles para calmar el miedo y el estrés.",
         "price" : 3400,
         "categories" : ["plants"],
-        "image" : "https://png.pngtree.com/png-clipart/20230913/original/pngtree-bluebell-clipart-blue-bluebell-flower-flower-icon-isolated-on-white-background-png-image_11057950.png"
+        "image" : "images/songflower.jpg"
     },{
         "name" : "Antihongo",
         "id" : "antishroom",

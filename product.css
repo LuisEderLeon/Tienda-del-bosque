@@ -122,7 +122,7 @@ footer.buyNow{
     }
     figcaption.pageDescription{
         width: 40vw;
-        font-size: calc(0.2vw + 2vh);
+        font-size: calc(0.6vw + 2vh);
         position: absolute;
         right: 0;
         top: 5vw;

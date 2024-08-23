@@ -40,6 +40,6 @@
         "description" : "Al molerse y mesclarse con agua, generan un liquido capaz de invertir las propiedades de un objeto. Las magmahojas congelan, las megacuras maximizan entropia, las flores cantoras amplifican los sonidos en lugar de minimizarlos. Estos hongos no tienen una explicación real de como logran invertir las propiedades de los objetos, por lo que forman parte de la magia oscura, aquella que no se puede explicar.",
         "price" : 20700,
         "categories" : ["dark","shrooms"],
-        "image" : "images/antishroom.png"
+        "image" : "images/antishroom.jpg"
     }
 ]
